@@ -9,6 +9,6 @@
     <declare-styleable name="ProgressImageButton">
         <attr name="src" format="reference" />
         <attr name="srcTint" format="color" />
-        <attr name="progressTint" format="color" />
+        <attr name="imageProgressTint" format="color" />
     </declare-styleable>
 </resources>

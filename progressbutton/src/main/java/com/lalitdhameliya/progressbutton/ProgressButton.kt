@@ -52,7 +52,7 @@ class ProgressButton : FrameLayout {
     /**
      * This method is used to show/hide the progressbar.
      *
-     * @param shouldShowProgress show progressbar if true/hide progressbar if false.
+     * [shouldShowProgress] show progressbar if true/hide progressbar if false.
      */
     fun showProgress(shouldShowProgress: Boolean) {
         if (shouldShowProgress) {

@@ -16,7 +16,6 @@ import android.widget.ViewFlipper
  * Created by Lalit on 05-Jun-17.
  * This class contains a image view and progressbar. These views can be switch between button and progress
  * layout.
- *
  */
 
 class ProgressImageButton : RelativeLayout {
@@ -36,7 +35,7 @@ class ProgressImageButton : RelativeLayout {
     /**
      * This method is used to initialize the layout for progress button.
      *
-     * @param context instance caller.
+     * [context] instance caller.
      */
     constructor(context: Context) : super(context) {
         init(context)
@@ -48,7 +47,7 @@ class ProgressImageButton : RelativeLayout {
                 R.styleable.ProgressImageButton, 0, 0)
         mButtonSrc = a.getDrawable(R.styleable.ProgressImageButton_src)
         mButtonSrcTint = a.getColor(R.styleable.ProgressImageButton_srcTint, 0)
-        mProgressTint = a.getInteger(R.styleable.ProgressImageButton_progressTint, android.R.color.white)
+        mProgressTint = a.getInteger(R.styleable.ProgressImageButton_imageProgressTint, android.R.color.white)
 
         init(context)
     }
@@ -65,11 +64,11 @@ class ProgressImageButton : RelativeLayout {
     /**
      * It will initialize the progress button.
      *
-     * @param context instance of the caller.
+     * [context] instance of the caller.
      */
     private fun init(context: Context) {
         val view = View.inflate(context, R.layout.image_progress_button, this)
-        mViewFlipper = view.findViewById(R.id.layout_progress_button_view_flipper) as ViewFlipper
+        mViewFlipper = view.findViewById(R.id.layout_image_progress_button_view_flipper) as ViewFlipper
         mImageView = view.findViewById(R.id.layout_image_progress_image_view) as AppCompatImageView
         mProgressBar = view.findViewById(R.id.layout_image_progress_button_progress_bar) as ProgressBar
 
@@ -90,7 +89,7 @@ class ProgressImageButton : RelativeLayout {
     /**
      * This method is used to show/hide the progressbar.
      *
-     * @param shouldShowProgress show progressbar if true/hide progressbar if false.
+     * [shouldShowProgress] show progressbar if true/hide progressbar if false.
      */
     fun showProgress(shouldShowProgress: Boolean) {
         if (shouldShowProgress) {

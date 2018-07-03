@@ -11,5 +11,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         testing_button.setOnClickListener { testing_button.showProgress(true) }
+        test.setOnClickListener { test.showProgress(true) }
     }
 }
